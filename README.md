@@ -5,7 +5,7 @@ A classic memory game built using **HTML**, **CSS**, and **JavaScript**. Test yo
 
 ## 🚀 Live Demo
 
-[Click here to play the game!](https://your-live-link.com) 
+[Click here to play the game!](https://nicksboson.github.io/SIMON-SAYS/) 
 
 ---
 
