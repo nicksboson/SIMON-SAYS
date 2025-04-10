@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    height: 250px;
+    width: 250px;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.btn{
+height: 100px;
+width: 100px;
+border: 10px solid black;
+border-radius: 10px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.bt1{
+    background-color:#694D75;
+}
+.bt2{
+    background-color: #1B5299;
+}
+.bt3{
+    background-color: #9FC2CC;
+}
+.bt4{
+    background-color: #F1ECCE;
+}
+.flash{
+    background-color: white;
+}
+.userflash{
+    background-color: green;
+}
