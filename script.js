@@ -4,19 +4,55 @@ let btnColors = ["bt1", "bt2", "bt3", "bt4"];
 let started = false;
 let level = 0;
 
-const heading = document.querySelector("h2");
+const heading = document.querySelector("h1");
+const startBtn = document.getElementById("startBtn");
+const rulesBtn = document.getElementById("rulesBtn");
+const rulesModal = document.getElementById("rulesModal");
+const gameOverModal = document.getElementById("gameOverModal");
+const finalScore = document.getElementById("finalScore");
+const tryAgainBtn = document.getElementById("tryAgainBtn");
+const closeBtn = document.querySelector(".close-btn");
 
-document.addEventListener("keypress", function () {
+// Function to start the game
+function startGame() {
   if (!started) {
     started = true;
+    startBtn.disabled = true;
+    startBtn.textContent = "Game in Progress";
     levelUp();
   }
+}
+
+// Modal functionality
+rulesBtn.addEventListener("click", () => {
+  rulesModal.style.display = "block";
 });
+
+closeBtn.addEventListener("click", () => {
+  rulesModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === rulesModal) {
+    rulesModal.style.display = "none";
+  }
+});
+
+// Try Again button functionality
+tryAgainBtn.addEventListener("click", () => {
+  gameOverModal.style.display = "none";
+  startBtn.disabled = false;
+  startBtn.textContent = "Start Game";
+  restartGame();
+});
+
+// Add event listener for start button
+startBtn.addEventListener("click", startGame);
 
 function levelUp() {
   userSeq = [];
   level++;
-  heading.innerText = `Level ${level}`;
+  heading.innerText = `Simon Says - Level ${level}`;
 
   let randIdx = Math.floor(Math.random() * 4);
   let randBtnId = btnColors[randIdx];
@@ -46,6 +82,10 @@ function btnPressed() {
 
 document.querySelectorAll(".btn").forEach(btn => {
   btn.addEventListener("click", btnPressed);
+  btn.addEventListener("touchstart", function(e) {
+    e.preventDefault(); // Prevent default touch behavior
+    btnPressed.call(this);
+  });
 });
 
 function checkAnswer(idx) {
@@ -54,7 +94,9 @@ function checkAnswer(idx) {
       setTimeout(levelUp, 1000);
     }
   } else {
-    heading.innerText = `GAME OVER!! Your Score: ${level} — Press any key to restart.`;
+    heading.innerText = "Simon Says";
+    finalScore.textContent = level;
+    gameOverModal.style.display = "block";
     document.body.style.backgroundColor = "red";
     setTimeout(() => {
       document.body.style.backgroundColor = "#0e0e52";

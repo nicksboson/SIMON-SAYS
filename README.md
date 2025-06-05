@@ -1,39 +1,47 @@
-# 🧠 Simon Says Game
+# Simon Says Memory Game
 
-A classic memory game built using **HTML**, **CSS**, and **JavaScript**. Test your brain's memory by repeating the sequence of colors that light up — each level adds a new one!
+A modern implementation of the classic memory game built with HTML5, CSS3, and JavaScript. Challenge your cognitive abilities by memorizing and reproducing increasingly complex sequences of colors.
 
+## Live Demo
 
-## 🚀 Live Demo
+[Play the game](https://nicksboson.github.io/SIMON-SAYS/)
 
-[Click here to play the game!](https://nicksboson.github.io/SIMON-SAYS/) 
+## Features
 
----
+- Interactive gameplay supporting both mouse and keyboard input
+- Responsive design optimized for all devices
+- Progressive difficulty with increasing sequence complexity
+- Visual and audio feedback for user interactions
+- Smooth animations and transitions
+- Instant game reset functionality
 
-## 🎯 Features
+## Technical Implementation
 
-- 🎮 Interactive game play with click and keyboard events
-- 🖼️ Clean and responsive UI
-- 💡 Color sequence memory challenge
-- 🔄 Game restart on failure with smooth feedback
-- ✨ Animations and styling for a polished experience
+### Core Technologies
+- **HTML5**: Semantic markup and game structure
+- **CSS3**: Responsive design, animations, and visual effects
+- **JavaScript**: Game logic, event handling, and state management
 
----
+### Key Components
+- Event-driven architecture
+- Modular code structure
+- Cross-browser compatibility
+- Performance-optimized animations
 
-## 🛠️ Tech Stack
+## Game Rules
 
-- **HTML5** – structure and layout
-- **CSS3** – responsive styling, hover/flash effects
-- **JavaScript** – game logic, event handling, animations
+1. Initiate the game by pressing any key
+2. Observe the sequence of illuminated buttons
+3. Reproduce the sequence by clicking the buttons in the same order
+4. Successfully completing a sequence advances you to the next level
+5. Each level introduces an additional step to the sequence
+6. Incorrect reproduction results in game over
 
----
+## Development
 
-## 🧩 How It Works
+This project is open source and available for educational purposes. Feel free to fork, modify, and contribute to its development.
 
-1. Press any key to start.
-2. Watch the pattern of button flashes.
-3. Click the buttons in the same order.
-4. Every correct sequence levels you up.
-5. Make a mistake? Game over — try again!
+## License
 
----
+MIT License - See LICENSE file for details
 
